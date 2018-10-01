@@ -7,9 +7,9 @@ import random
 
 
 def read_input(path):
-    image=np.load("../CIKM_4layer_3ch_light/X_light.npy")
+    image=np.load("./X_light.npy")
     image=image[:,:,:,:,:,0:3]
-    label=np.load("../CIKM_4layer_3ch_light/Y_light.npy")
+    label=np.load("./Y_light.npy")
     d,__,__,__,__,__ = np.shape(image)
     te_image=np.asarray(image[0:int(d*0.2)])
     te_label=np.asarray(label[0:int(d*0.2)])
